@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ConsentProvider } from "./context/ConsentContext";
+import Index from "./pages/Index";
 import LandingPage from "./pages/patient/LandingPage";
 import VerifyIdentity from "./pages/patient/VerifyIdentity";
 import DocumentViewer from "./pages/patient/DocumentViewer";
@@ -23,6 +24,9 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
+            {/* Home - Auto-redirect to demo */}
+            <Route path="/" element={<Index />} />
+            
             {/* Patient Consent Flow */}
             <Route path="/patient/consent/:token" element={<LandingPage />} />
             <Route path="/patient/consent/:token/verify" element={<VerifyIdentity />} />
