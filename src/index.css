@@ -203,12 +203,13 @@ All colors MUST be HSL.
 
   /* Medical card styling */
   .medical-card {
-    @apply bg-card rounded-xl border border-border shadow-card;
+    @apply bg-card rounded-xl border border-border;
     @apply transition-shadow duration-200;
+    box-shadow: var(--shadow-card);
   }
 
   .medical-card:hover {
-    @apply shadow-card-hover;
+    box-shadow: var(--shadow-card-hover);
   }
 
   /* Signature canvas */
