@@ -129,6 +129,7 @@ const LandingPage = () => {
                   { step: 2, title: "Document Review", desc: "Read the informed consent document" },
                   { step: 3, title: "Comprehension Check", desc: "Confirm your understanding with audio and video" },
                   { step: 4, title: "Digital Signature", desc: "Sign the consent electronically" },
+                  { step: 5, title: "Completion", desc: "Download your signed consent and view next steps" },
                 ].map((item) => (
                   <div key={item.step} className="flex items-start gap-3">
                     <div className="step-indicator incomplete mt-1">{item.step}</div>

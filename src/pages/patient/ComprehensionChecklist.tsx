@@ -156,7 +156,7 @@ const ComprehensionChecklist = () => {
         siteName={patientInfo.studyInfo.siteName}
         patientId={patientInfo.patientId}
         currentStep={3}
-        totalSteps={7}
+        totalSteps={5}
         stepTitle="Comprehension Checklist"
       />
 

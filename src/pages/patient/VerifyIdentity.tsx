@@ -145,7 +145,7 @@ const VerifyIdentity = () => {
         siteName={patientInfo.studyInfo.siteName}
         patientId={patientInfo.patientId}
         currentStep={1}
-        totalSteps={7}
+        totalSteps={5}
         stepTitle="Identity Verification"
       />
 
