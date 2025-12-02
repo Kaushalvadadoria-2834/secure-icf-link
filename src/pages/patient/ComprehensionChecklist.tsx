@@ -320,7 +320,7 @@ const ComprehensionChecklist = () => {
                             </div>
 
                             <p className="text-xs text-center text-muted-foreground">
-                              Minimum 5 seconds, maximum 30 seconds
+                              Recording will auto-stop at 30 seconds
                             </p>
                           </div>
                         ) : (
