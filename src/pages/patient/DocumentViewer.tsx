@@ -65,7 +65,7 @@ const DocumentViewer = () => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   const currentPageData = documentPages[currentPage - 1];
-  const canAdvance = hasScrolledToBottom && timeOnPage >= currentPageData.minimumTime;
+  const canAdvance = hasScrolledToBottom;
   const isLastPage = currentPage === documentPages.length;
 
   // Timer for time on page
@@ -95,12 +95,9 @@ const DocumentViewer = () => {
 
   const handleNextPage = () => {
     if (!canAdvance) {
-      const remaining = currentPageData.minimumTime - timeOnPage;
       toast({
-        title: remaining > 0 ? "Please take time to read" : "Please scroll to bottom",
-        description: remaining > 0
-          ? `Please spend at least ${remaining} more seconds on this page.`
-          : "Please scroll to the bottom of the page before continuing.",
+        title: "Please scroll to bottom",
+        description: "Please scroll to the bottom of the page before continuing.",
         variant: "destructive",
       });
       return;
@@ -285,9 +282,7 @@ const DocumentViewer = () => {
               )}
               {!canAdvance && (
                 <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-popover text-popover-foreground text-xs px-3 py-1.5 rounded-md shadow-lg whitespace-nowrap">
-                  {!hasScrolledToBottom
-                    ? "Scroll to bottom"
-                    : `Wait ${currentPageData.minimumTime - timeOnPage}s more`}
+                  Scroll to bottom to continue
                 </div>
               )}
             </Button>
