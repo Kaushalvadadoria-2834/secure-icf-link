@@ -145,7 +145,7 @@ const SignaturePage = () => {
         siteName={patientInfo.studyInfo.siteName}
         patientId={patientInfo.patientId}
         currentStep={4}
-        totalSteps={7}
+        totalSteps={5}
         stepTitle="Digital Signature"
       />
 

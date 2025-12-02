@@ -157,7 +157,7 @@ const DocumentViewer = () => {
         siteName={patientInfo.studyInfo.siteName}
         patientId={patientInfo.patientId}
         currentStep={2}
-        totalSteps={7}
+        totalSteps={5}
         stepTitle="Reading Consent Document"
         timeSpent={`${Math.floor(documentState.totalReadingTime / 60)}:${(documentState.totalReadingTime % 60)
           .toString()
